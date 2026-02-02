@@ -1,63 +1,38 @@
-# restraurant-reservation-bot-GEN-AI-
+# 🍽️ Restaurant Reservation Bot (Gen-AI)
 
-⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+<div align="center">
 
-A simple, fast, and accurate restaurant reservation system built using FastAPI.
-It offers a modern web UI with a powerful backend to manage table availability, bookings, modifications, cancellations, and menu viewing — without guessing or fake availability.
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
+![Uvicorn](https://img.shields.io/badge/Uvicorn-202020?style=for-the-badge&logo=uvicorn&logoColor=white)
 
-⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+**A high-performance, precision-engineered reservation system.** *No "hallucinated" availability—just real-time data, lightning-fast responses, and a sleek modern interface.*
+</div>
 
-✨ What This Project Does
+---
 
-✅ Displays real available time slots
-✅ Allows users to:
-	•	🔍 Check availability
-	•	🪑 Book a table
-	•	✏️ Modify a reservation
-	•	❌ Cancel a reservation
-	•	📋 View the restaurant menu
+## ✨ What This Project Does
 
-✅ Interaction methods:
-	•	🧭 Buttons & forms (primary)
-	•	💬 Optional chat input
+A simple, fast, and accurate restaurant reservation system built using **FastAPI**. It offers a modern web UI to manage table availability without guessing or fake availability.
 
-✅ Entire application runs from one Python file
+✅ **Real-time Availability** – Displays actual open time slots.  
+✅ **Full Lifecycle** – Check, Book, Modify, and Cancel reservations.  
+✅ **Digital Menu** – Detailed item views with compact data storage.  
+✅ **All-in-One** – Entire application runs from a single Python file.
 
-⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+---
 
-🧩 Key Features
+## 🏗️ System Architecture
 
-🌐 Web Interface
-	•	🎨 Clean and responsive UI
-	•	🧾 Simple inputs (Guests, Date, Time, Name)
-	•	🆔 Reservation reference ID support
-	•	🔄 Live availability refresh
-
-⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
-
-⚙️ Backend Logic
-	•	⏱️ Slot-based scheduling
-	•	🪑 Seat-capacity validation
-	•	🚫 Turn-time blocking (no overlapping tables)
-	•	⚡ Fast in-memory caching
-	•	👤 Session-aware interactions
-
-⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
-
-📋 Menu System
-	•	📝 Short menu view (item names only)
-	•	📖 Detailed menu view (with descriptions)
-	•	🗜️ Compact and efficient data storage
-⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
-
-### 🏗️ System Architecture
+The following diagram illustrates the flow from user interaction through the logic engines to the in-memory data store.
 
 ```mermaid
 flowchart TD
     %% Node Definitions
     U(fa:fa-user User / Browser)
     UI[[fa:fa-desktop Web UI]]
-    API{{"fa:fa-gears FastAPI Backend"}}
+    API{{"fa:fa-bolt FastAPI Backend"}}
     
     subgraph Logic_Layer [Action Controller]
         direction TB
@@ -94,10 +69,12 @@ flowchart TD
     BK & MD & CN --> STORE
     MN --> MENU
 
-    %% Styling
-    style U fill:#f9f,stroke:#333,stroke-width:2px
-    style API fill:#05998b,color:#fff,stroke-width:2px
-    style CTRL fill:#fff9c4,stroke:#fbc02d
-    style STORE fill:#e1f5fe,stroke:#01579b
-    style CACHE fill:#e1f5fe,stroke:#01579b
-    style MENU fill:#e1f5fe,stroke:#01579b
+    %% Dark-Mode Optimized Styling
+    style U fill:#ff00ff,stroke:#fff,stroke-width:2px,color:#fff
+    style API fill:#00ffcc,stroke:#00b38f,stroke-width:2px,color:#000
+    style CTRL fill:#ffff00,stroke:#cca300,color:#000
+    style Engines fill:#1a1a1a,stroke:#444,color:#fff
+    style Data_Storage fill:#1a1a1a,stroke:#444,color:#fff
+    style STORE fill:#00d2ff,stroke:#0086a3,color:#000
+    style CACHE fill:#00d2ff,stroke:#0086a3,color:#000
+    style MENU fill:#00d2ff,stroke:#0086a3,color:#000
